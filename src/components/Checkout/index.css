@@ -1,0 +1,81 @@
+/* index.css */
+
+.checkout-page__bg-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .checkout-page__bg-container h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-page-items {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .checkout-page-items img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    margin-right: 10px;
+  }
+  
+  .buynow-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Position the button to the right */
+  }
+
+  .grandtotal{
+    font-weight: 600;
+  }
+
+  .checkout-page__bg-container {
+    padding: 20px;
+}
+
+.checkout-page__checkout-card-wrapper {
+    padding: 0;
+}
+
+.checkout-page__checkout-item {
+    list-style-type: none;
+}
+
+.checkout-page__checkout-address-card {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+.checkout-page__checkout-address-card-items {
+    list-style-type: none;
+}
+
+.address-text {
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.conform-button{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background-color: blue;
+  border-radius: 2px;
+  color: white;
+}
+  /* You can add more styling as needed */
+  

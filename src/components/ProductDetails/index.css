@@ -1,0 +1,14 @@
+.product-details-page__bg-container {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+}
+
+.product-details-page__product-details-card {
+    align-content: center;
+    color: blue;
+}
+
+.product-details-page__product-img {
+   width: 50%; 
+}

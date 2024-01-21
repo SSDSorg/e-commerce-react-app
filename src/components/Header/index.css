@@ -1,0 +1,65 @@
+.header-page__header-section {
+    /* background-color: rgb(0, 196, 196); */
+    border-bottom: 2px solid grey;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    position: relative;
+}
+
+.header-page__header-logo {
+    width: 50px;
+}
+
+.header-page__header-tabs-card {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-page__header-tab-items {
+    list-style-type: none;
+}
+
+.header-page__header-link-items {
+    text-decoration: none;
+    color: black;
+}
+
+.header-page__tab-icons {
+    font-size: 24px; 
+    display: flex;
+    
+}
+
+header .icon-cart {
+    display: flex;
+}
+
+header .header-page__header-link-items span{
+  display: flex;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.header-page__cart-count{
+    font-weight: bold;
+    background-color: rgb(248, 5, 5);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    right: 6px;
+    font-size: 14px;
+    color: white;
+}
