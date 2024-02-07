@@ -6,6 +6,7 @@ import cartContext from '../../context/cart/cartContext';
 
 const Checkout = () => {
 
+    const navigate = useNavigate();
     const cartDetailsFromContext = useContext(cartContext);
     const [orderPlaced, setOrderPlaced] = useState({ items:"", total:"" });
     const [addressDetails, setAddressDetails]= useState({items:"", total:"" ,country:'',fullName:'',houseName:'',mandalName:'',mobileNumber:'',pincode:'',stateName:'',villName:''})
@@ -41,7 +42,6 @@ const Checkout = () => {
 
     useEffect(() => {
         addressFunc()
-        // placeOrder()
     }, [])
 
 
@@ -54,7 +54,8 @@ const Checkout = () => {
     );
     
     const handleOnclickconfirm = ()=>{
-        navigate('');
+        // navigate('/confirm');
+        
     }
 
     return (

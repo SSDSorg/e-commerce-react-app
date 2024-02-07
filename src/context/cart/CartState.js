@@ -12,11 +12,17 @@ const CartState = (props) => {
     const localData = localStorage.getItem("checkoutArr");
     return localData ? JSON.parse(localData) : [];
   });
+  
+  const [myOrders, setmyOrders]=useState(()=>{
+    const localData = localStorage.getItem("myOrders");
+    return localData ? JSON.parse(localData): [];
+  })
 
   useEffect(() => {
     localStorage.setItem("cartState", JSON.stringify(state));
     localStorage.setItem("checkoutArr", JSON.stringify(checkoutArr));
-  }, [state, checkoutArr]);
+    localStorage.setItem("myOrders",JSON.stringify(myOrders));
+  }, [state, checkoutArr,myOrders]);
 
   const addToCart = ({ id, imgUrl, title,description, price }) => {
     const existingProductIndex = state.findIndex((product) => product.id === id);
@@ -59,9 +65,14 @@ const CartState = (props) => {
     const filteredCart = array.filter(eachItem => eachItem.isChecked === true);
     setCheckoutArr(filteredCart)
   }
+  
+  const filtermyOrders = (array)=>{
+    const myOrderslist = array.filter(eachItem => eachItem.isChecked === true);
+    setmyOrders(myOrderslist)
+  }
 
   return (
-    <CartContext.Provider value={{ state, checkoutArr, addToCart, removeFromCart, toggleCheckbox, filterCheckoutItemsArr }}>
+    <CartContext.Provider value={{ state, checkoutArr,myOrders, addToCart, removeFromCart, toggleCheckbox, filterCheckoutItemsArr,filtermyOrders }}>
       {props.children}
     </CartContext.Provider>
   );
