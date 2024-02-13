@@ -21,7 +21,7 @@ const ProductDetails = () => {
         const url =`https://dummyjson.com/products/${id}`
         const response = await fetch(url)
         const data = await response.json()
-
+        console.log(url)
         if (!response.ok) {
             alert("Backend Error")
         }

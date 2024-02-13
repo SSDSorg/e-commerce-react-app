@@ -11,11 +11,11 @@ const Cart = () => {
 
   const CartItem = (props) => {
     const { cartItem, removeFromCart } = props;
-    const { id, title, description, imgUrl, quantity, price, isChecked } = cartItem;
+    const { _id, title, description, imgUrl, quantity, price, isChecked } = cartItem;
     
     const handleDecrement = () => {
       if (quantity > 1) {
-        cartDetailsFromContext.removeFromCart({ id });
+        cartDetailsFromContext.removeFromCart({ _id });
       }
     };
 
@@ -25,7 +25,7 @@ const Cart = () => {
           type="checkbox"
           name={title}
           checked={isChecked}
-          onChange={() => cartDetailsFromContext.toggleCheckbox({ id })}
+          onChange={() => cartDetailsFromContext.toggleCheckbox({ _id })}
         />
         <img className='cart-page__product-img' src={imgUrl} alt="product img" />
         <div className='cart-page__product-item-details-wrapper'>
@@ -46,7 +46,7 @@ const Cart = () => {
             <button
               type="button"
               className="cart-page__cart-item-increment-btn"
-              onClick={() => cartDetailsFromContext.addToCart({ id, imgUrl, title })}
+              onClick={() => cartDetailsFromContext.addToCart({ _id, imgUrl, title })}
             >
               +
             </button>
@@ -56,7 +56,7 @@ const Cart = () => {
         <button
           type="button"
           className="cart-page__delete-item-btn"
-          onClick={() => cartDetailsFromContext.removeFromCart({ id })}
+          onClick={() => cartDetailsFromContext.removeFromCart({ _id })}
         >
           <FontAwesomeIcon icon={faTrash} />
         </button>
@@ -75,7 +75,7 @@ const Cart = () => {
       <h1>Cart Items</h1>
       <ul className="cart-page__cart-items-wrapper">
         {cartDetailsFromContext.state.map((cartItem) => (
-          <CartItem key={cartItem.id} cartItem={cartItem} removeFromCart={cartDetailsFromContext.removeFromCart} />
+          <CartItem key={cartItem._id} cartItem={cartItem} removeFromCart={cartDetailsFromContext.removeFromCart} />
         ))}
       </ul>
 

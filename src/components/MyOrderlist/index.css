@@ -1,68 +1,59 @@
-.orderlist-page__bg-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
+.myorderlist-page__bg-container {
+  padding: 20px;
+}
+
+.myorderlist-page__myorders-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.myorderlist-page__myorders-list {
+  padding: 0;
   
-  .orderlist-page-items {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 12px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+}
+
+.myorderlist-page__myorders-list-item {
+  list-style-type: none;
+  border: 2px solid grey;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.myorderlist-page__myorders-list-item-order-id{
+  font-weight: bold;
+}
+
+.myorderlist-page__myorders-list-item-delivery-status {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.myorderlist-page__myorders-list-item-product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.myorderlist-page__myorders-list-item-product-card-item {
+  display: flex;
+  gap: 10px;
   
-  .orderlist-page-items img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-  }
-  
-  .orderlist-page-items div {
-    margin-right: 20px;
-  }
-  
-  .orderlist-page-items p {
-    margin: 0;
-  }
-  
-  .orderlist-page-items .title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .orderlist-page-items .quantity,
-  .orderlist-page-items .price {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .orderlist-page-items .price {
-    color: #27ae60;
-  }
-  
-  .orderlist-page__order-details-card {
-    list-style: none;
-    padding: 0;
-  }
-  
-  button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 5px;
-    font-size: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  button:hover {
-    background-color: #217dbb;
-  }
-  
-  .orderdetailsbutton.remove-button {
-    margin-left: 10px; 
+}
+
+.myorderlist-page__myorders-list-item-product-img {
+  width: 20%;
+  max-width: 100px;
+}
+
+.myorderlist-page__myorders-list-item-product-title {
+  color: rgb(0, 76, 255);
+  font-weight: bold;
+}
+
+.myorderlist-page__myorders-list-item-product-description {
+  font-size: 14px;
+}
+
+.myorderlist-page__myorders-list-item-product-details {
+  flex: 1; /* Added to allow the product details to take up remaining space */
 }

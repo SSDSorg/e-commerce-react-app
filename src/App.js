@@ -1,5 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Signup from './components/Signup';
+import Login from './components/Login';
 import Header from './components/Header';
 import Products from './components/Products';
 import ProductDetails from './components/ProductDetails';
@@ -7,6 +9,7 @@ import LikedProducts from './components/LikedProducts';
 import Cart from './components/Cart';
 import Confirm from './components/Confirm';
 import MyOrderlist from './components/MyOrderlist';
+import MayBeHideNav from './components/MayBeHideNav';
 
 //context state
 import CartState from './context/cart/CartState';
@@ -21,8 +24,12 @@ function App() {
     <div className="app-bg-container">
       <CartState>
       <BrowserRouter>
-        <Header/>
+        <MayBeHideNav>
+          <Header/>
+        </MayBeHideNav>
         <Routes>
+          <Route path='/signup' element={<Signup/>} />
+          <Route path='/login' element={<Login/>} />
           <Route path='/' element={<Products/>} />
           <Route path='/product/:id' element={<ProductDetails/>} />
           <Route path='/liked-products' element={<LikedProducts/>} />
@@ -38,5 +45,5 @@ function App() {
   );
 }
 
-  
+
 export default App;
