@@ -1,10 +1,23 @@
 import './index.css';
-import {AiOutlineHeart, AiOutlineShoppingCart} from 'react-icons/ai';
+import {AiOutlineHeart, AiOutlineShoppingCart,AiOutlineOrderedList} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import cartContext from "../../context/cart/cartContext";
 import { useContext } from 'react';
+import { AiOutlineHome } from 'react-icons/ai';
 
 const tabItemsArr = [
+    {
+        id: '0',  // Add a new ID for the home icon
+        tabTitle: 'home',
+        path: '/',
+        icon: <AiOutlineHome className='header-page__tab-icons' />
+    },
+    {
+        id: '3',
+        tabTitle: 'myOrders', // New tab for My Orders
+        path: '/my-orders',
+        icon: <AiOutlineOrderedList className='header-page__tab-icons' />
+    },
     {
         id: '1',
         tabTitle: 'wishlist',

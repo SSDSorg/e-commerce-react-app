@@ -1,0 +1,88 @@
+.confirm-page__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .confirm-page__heading {
+    text-align: center;
+    color: #333;
+  }
+  
+  .confirm-page__item-list {
+    margin-top: 20px;
+  }
+  
+  .confirm-page-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .confirm-page-item__image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .confirm-page-item__details {
+    flex-grow: 1;
+  }
+  
+  .confirm-page-item__title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .confirm-page-item__quantity,
+  .confirm-page-item__price {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .confirm-page__order-details {
+    margin-top: 20px;
+  }
+  
+  .confirm-page__sub-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .confirm-page__details {
+    line-height: 1.6;
+  }
+  
+  .conform-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Additional styling for back-to-checkout-button if needed */
+  .back-to-checkout-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

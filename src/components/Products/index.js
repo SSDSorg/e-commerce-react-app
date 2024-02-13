@@ -107,7 +107,7 @@ const Products = () => {
     }, [])
 
     const getProducts = async () => {
-        const url = 'https://dummyjson.com/products'
+        const url = 'http://localhost:8080/products'
         const response = await fetch(url)
         const data = await response.json()
         console.log(data)
@@ -199,8 +199,7 @@ const Products = () => {
 
     const ProductItem = (props) => {
         const { product } = props
-        const { id,title, description, images,price } = product
-        const imgUrl = images[0]
+        const { _id,title, description, imgUrl,price } = product
 
         return (
 
@@ -208,9 +207,10 @@ const Products = () => {
                 <img className='products-page__product-img' src={imgUrl} alt="product img" width='100%' height="100%" />
                 <h3 className='products-page__product-title'>{title}</h3>
                 <p className='products-page__product-description'>{description}</p>
+                <p className='products-page__product-price'>${price}</p>
                 {/*when view button is clicked it calls alert fun. and required details are passed as arguments to that fun. */}
-                <button className='products-page__product-button' onClick={() => alertFunction(title, description, images)}>View</button>
-                <button className='products-page__product-button' onClick={() => cartDetailsFromContext.addToCart({id,imgUrl,title,price})}>+Add</button> 
+                <button className='products-page__product-button' onClick={() => alertFunction(title, description, imgUrl)}>View</button>
+                <button className='products-page__product-button' onClick={() => cartDetailsFromContext.addToCart({_id,imgUrl,title,price})}>+Add</button> 
             </li>
         );
     }
@@ -220,7 +220,7 @@ const Products = () => {
     const productsComponent = () => {
         return (
             <ul className='products-page__products-section'>
-                {products && products.map(product => <ProductItem key={product.id} product={product} />)}
+                {products && products.map(product => <ProductItem key={product._id} product={product} />)}
             </ul>
         )
     }
